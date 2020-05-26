@@ -46,8 +46,44 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.zipkin.brave</groupId>
+                    <artifactId>brave</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-        
+        <dependency>
+            <groupId>io.zipkin.aws</groupId>
+            <artifactId>brave-propagation-aws</artifactId>
+            <version>0.21.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.aws</groupId>
+            <artifactId>zipkin-reporter-xray-udp</artifactId>
+            <version>0.21.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-xray-recorder-sdk-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-xray-recorder-sdk-aws-sdk</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-xray-recorder-sdk-aws-sdk-v2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-xray-recorder-sdk-aws-sdk-instrumentor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-xray-recorder-sdk-aws-sdk-v2-instrumentor</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
